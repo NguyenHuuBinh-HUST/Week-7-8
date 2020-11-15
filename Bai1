@@ -41,7 +41,7 @@ void inmt (MT a, char* ten, int m, int n)
 			}
 			cout << a[i][j] << " ";
 		}
-	}
+	} 
 }
 void nhapmt(MT a, char* ten, int n)
 {
