@@ -22,7 +22,7 @@ void nhapmt(MT a, char* ten, int m, int n)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			cout << "nhap phan tu " << i << " " << j << " " << "cua " << ten << ": ";
+			cout << "Nhap phan tu [" << i << "-" << j << "]" << "cua " << ten << ": ";
 			cin >> a[i][j];
 		}
 	}
@@ -49,7 +49,7 @@ void nhapmt(MT a, char* ten, int n)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			cout << "nhap phan tu " << i << " " << j << ": ";
+			cout << "Nhap phan tu [" << i << "-" << j << "]: ";
 			cin >> a[i][j];
 		}
 	}
@@ -104,15 +104,14 @@ void nhanmt (MT a, MT b, MT c, int n)
 }
 int main()
 {
-	MT A, B, C, D, E, F;
+MT A, B, C, D, E, F;
 	hct a, b, c, d, e, f;
 	cin >> a; nhapmt(A, a.ten, a.hang); inmt(A, a.ten, a.hang);
 	cin >> b; nhapmt(B, b.ten, b.hang); inmt(B, b.ten, b.hang);
 	cin >> c; nhapmt(C, c.ten, c.hang, c.cot); inmt(C, c.ten, c.hang, c.cot);
 	fflush(stdin);
 	nhanmt(A, B, E, a.hang);
-
-	nhanmt(C, E, F, c.hang, c.cot, a.hang);
-	cout << "dat ten mt tich cua " << c.ten << " va E la : "; gets(f.ten);
+	nhanmt(E, C, F, a.hang, a.hang, c.cot);
+	cout << "Ten MT tich cua " << c.ten << " va A*B la : "; gets(f.ten);
 	inmt(F, f.ten, c.hang, c.cot);
 }
